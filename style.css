@@ -1,14 +1,16 @@
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #f0f8ff;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
     color: #333;
   }
   
   header {
-    background-color: #4caf50;
-    color: white;
+    background: rgba(255, 255, 255, 0.9);
     text-align: center;
     padding: 30px 15px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -17,47 +19,54 @@ body {
   header h1 {
     margin: 0;
     font-size: 2em;
+    color: #34495e;
   }
   
   header p {
     margin-top: 8px;
     font-size: 1.1em;
+    color: #555;
   }
   
   main {
+    flex: 1;
     padding: 40px 20px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
   }
   
   .kelas-grid, .materi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     margin-top: 30px;
   }
   
   .kelas-box, .materi-card {
     background: white;
-    border: 2px solid #4caf50;
-    border-radius: 10px;
-    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    padding: 20px 30px;
     text-align: center;
     text-decoration: none;
-    color: #388e3c;
+    color: #2980b9;
     font-weight: bold;
-    transition: all 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 120px;
   }
   
   .kelas-box:hover, .materi-card:hover {
-    background: #e8f5e9;
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: #ecfaff;
   }
   
   .back-button {
     display: inline-block;
     margin-top: 20px;
-    background: #4db6ac;
+    background: #66a6ff;
     padding: 10px 16px;
     border-radius: 8px;
     text-decoration: none;
@@ -67,6 +76,15 @@ body {
   }
   
   .back-button:hover {
-    background: #009688;
+    background: #4b92ff;
+  }
+  
+  footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.95em;
+    color: #555;
+    border-top: 1px solid #ddd;
   }
   
